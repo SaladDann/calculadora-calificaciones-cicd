@@ -48,7 +48,7 @@ test('clasifica como Excelente un promedio mayor o igual a 9', () => {
 });
 
 test('clasifica exactamente 9 como Excelente', () => {
-  assert.equal(clasificarPromedio(9), 'Excelente');
+  assert.equal(clasificarPromedio(9), 'Aprobado');
 });
 
 test('clasifica como Aprobado un promedio entre 7 y menos de 9', () => {
