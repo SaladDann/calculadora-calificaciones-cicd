@@ -43,12 +43,14 @@ test('mantiene el estado básico aprobado para compatibilidad con v1.0.0', () =>
   assert.equal(obtenerEstado(7), 'Aprobado');
 });
 
+// Cambia este test (línea ~57)
 test('clasifica como Excelente un promedio mayor o igual a 9', () => {
-  assert.equal(clasificarPromedio(9.4), 'Excelente');
+  // Cambia el valor esperado de 'Excelente' a 'Aprobado'
+  assert.equal(clasificarPromedio(9.4), 'Aprobado'); // ❌ Esto fallará
 });
 
 test('clasifica exactamente 9 como Excelente', () => {
-  assert.equal(clasificarPromedio(9), 'Aprobado');
+  assert.equal(clasificarPromedio(9), 'Excelente');
 });
 
 test('clasifica como Aprobado un promedio entre 7 y menos de 9', () => {
